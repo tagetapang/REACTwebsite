@@ -90,7 +90,7 @@ export default function Navbar(props) {
               id="flexSwitchCheckDefault"
               onClick={props.togglemode}
             />
-            <label className="form-check-label text-white mx-2" for="flexSwitchCheckDefault text-light">
+            <label className="form-check-label text-white mx-2" htmlFor="flexSwitchCheckDefault text-light">
               {props.scolor}
             </label>
           </div>

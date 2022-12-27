@@ -25,6 +25,7 @@ export default function Textform(props) {
     settext("");
   }
   const handlecopy = () =>{
+   
 
 
     var text = document.getElementById("mybox");
@@ -32,9 +33,10 @@ export default function Textform(props) {
     text.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(text.value);
     props.showalert("copied","success");
+    document.getSelection().removeAllRanges();
   }
 
-  const [textt, settext] = useState('');
+  const [textt, settext] = useState(" ");
   return (
     <>
       <div className={`container text-${props.mode === 'light'?"dark": "light"}`}>
@@ -50,27 +52,27 @@ export default function Textform(props) {
           ></textarea>
         </div>
       </div>
-      <div className="buttons">
-        <button className={`btn btn-${props.mode=== 'light'?'primary':'secondary'} mx-2`} onClick={handleupclick}>
+      <div className="container buttons">
+        <button disabled={textt.length === 0} className={`btn  btn-${props.mode=== 'light'?'primary':'secondary'} mx-2 my-1`} onClick={handleupclick}>
           upper case
         </button>
-        <button className={`btn btn-${props.mode=== 'light'?'primary':'secondary'}  mx-2`} onClick={handlelowerc}>
+        <button disabled={textt.length === 0} className={`btn  btn-${props.mode=== 'light'?'primary':'secondary'}  mx-2 my-1`} onClick={handlelowerc}>
           lower case
         </button>
-        <button className={`btn btn-${props.mode=== 'light'?'primary':'secondary'}  mx-2`} onClick={handleencript}>
+        <button disabled={textt.length === 0} className={`btn  btn-${props.mode=== 'light'?'primary':'secondary'}  mx-2 my-1`} onClick={handleencript}>
           encript
         </button>
-        <button className={`btn btn-${props.mode=== 'light'?'primary':'secondary'}  mx-2`} onClick={handlecopy}>copy</button>
-        <button className={`btn btn-${props.mode=== 'light'?'primary':'secondary'}  mx-2`} onClick={handleerase}>erase</button>
+        <button disabled={textt.length === 0} className={`btn  btn-${props.mode=== 'light'?'primary':'secondary'}  mx-2 my-1`} onClick={handleerase}>erase</button>
+        <button disabled={textt.length === 0} className={`btn  btn-${props.mode=== 'light'?'primary':'secondary'}  mx-2 my-1`} onClick={handlecopy}>copy</button>
       </div>
       <div className={`container text-${props.mode === 'light'?"dark": "light"}`}>
         <h1>your text summary</h1>
         <p>
-          {textt.split(" ").length - 1} no of words and {textt.length} no of
+          {textt.split(" ").filter((Element) => {return Element.length !== 0}).length} no of words and {textt.length} no of
           characters
         </p>
         <p>
-          {0.008 * textt.split(" ").length} minutes required to read the above
+          {0.008 * textt.split(" ").filter((Element) => {return Element.length !== 0}).length} minutes required to read the above
         </p>
         <h2>preview</h2>
         <p><b>{textt.length > 0? textt : "enter text in the above section to preview it here"}</b></p>
