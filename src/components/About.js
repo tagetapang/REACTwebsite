@@ -69,6 +69,8 @@ export default function About(props) {
               <li>hano</li>
               
              </ul>
+             <img src={process.env.PUBLIC_URL+"flower.jpg"} class="img-fluid" alt="not found"/>
+             
             </div>
           </div>
         </div>
@@ -95,7 +97,7 @@ export default function About(props) {
           >
             <div className="accordion-body">
              <strong>dutta village is between mudang tage and hija village. Dutta village is a small village with small people i think so</strong>
-             
+
             </div>
           </div>
         </div>
