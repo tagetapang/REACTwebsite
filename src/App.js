@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
@@ -23,9 +23,9 @@ function App() {
         color: "white",
         backgroundColor: "#212529",
       });
-      showalert("this is the message", "danger");
+     
     } else {
-      showalert("this is the second message", "success");
+     
       setstyleabout({
         color: "black",
         backgroundColor: "white",
@@ -50,14 +50,14 @@ function App() {
     <Router>
       <Navbar
         title="TagZiro"
-        list="otherlist"
+        list="more"
         mode={mode}
         togglemode={toogle}
         scolor={cswitch}
       />
       <Alert alert={alert} />
       <Routes>
-        <Route exact path="/About" element={ <About mode={styleabout} />}/>
+        <Route exact path="/About-Villages" element={ <About mode={styleabout} />}/>
          
        
         <Route exact path="/" element = { <Textform

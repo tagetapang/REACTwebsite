@@ -17,7 +17,7 @@ export default function About(props) {
               aria-controls="collapseOne"
               style={props.mode}
             >
-              Accordion Item #1
+              Mudang Tage
             </button>
           </h2>
           <div
@@ -27,17 +27,20 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <strong> mudang tage village is located basically between hapoli and ziro. The village comprises of the following title</strong> 
+              <ul>
+                <li>Tage</li>
+                <li>mudang</li>
+                <li>buru</li>
+                <li>leggang</li>
+                <li>tadu</li>
+              </ul>
+              <p>The neighbour of this village are <strong> duta village  </strong> and <strong>bamin michi</strong> </p>
+              
             </div>
           </div>
         </div>
+        {/* __________________________________________________________________________ */}
         <div className="accordion-item"  style={props.mode}>
           <h2 className="accordion-header" id="headingTwo">
             <button
@@ -49,7 +52,7 @@ export default function About(props) {
               aria-controls="collapseTwo"
               style={props.mode}
             >
-              Accordion Item #2
+              Bamin Michi
             </button>
           </h2>
           <div
@@ -59,17 +62,17 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+             <strong>bamin michi is also a village located between hapoli and old ziro. This village comprises of the following titles</strong>
+             <ul>
+              <li>bamin</li>
+              <li>michi</li>
+              <li>hano</li>
+              
+             </ul>
             </div>
           </div>
         </div>
+        {/* __________________________________________________________________________ */}
         <div className="accordion-item"  style={props.mode}>
           <h2 className="accordion-header" id="headingThree">
             <button
@@ -81,7 +84,7 @@ export default function About(props) {
               aria-controls="collapseThree"
               style={props.mode}
             >
-              Accordion Item #3
+              Dutta village
             </button>
           </h2>
           <div
@@ -91,14 +94,8 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+             <strong>dutta village is between mudang tage and hija village. Dutta village is a small village with small people i think so</strong>
+             
             </div>
           </div>
         </div>

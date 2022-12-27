@@ -33,11 +33,11 @@ export default function Navbar(props) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-Link text-white mx-2" to="/About">
-                About
+              <Link className="nav-Link text-white mx-2" to="/About-Villages">
+                About-Villages
               </Link>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown ">
               <Link
                 className="nav-Link dropdown-toggle text-white mx-2"
                 to="#/"
@@ -47,7 +47,7 @@ export default function Navbar(props) {
               >
                 {props.list}
               </Link>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu bg-dark">
                 <li>
                   <Link className="dropdown-item text-white mx-2" to="#/">
                     Action
@@ -68,9 +68,9 @@ export default function Navbar(props) {
                 </li>
               </ul>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-Link disabled text-white mx-2">Disabled</Link>
-            </li>
+            </li> */}
           </ul>
           {/* <form className="d-flex" role="search">
             <input
