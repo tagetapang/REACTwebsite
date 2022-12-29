@@ -4,12 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
-import Textform from "./components/Textform";
-import Alert from "./components/Alert";
+
+import Cards from "./components/Cards";
+
 function App() {
   const [mode, setmode] = useState("light");
   const [cswitch, setcswitch] = useState("enable dark mode");
-  const [alert, setalert] = useState(null);
+
   const [styleabout, setstyleabout] = useState({
     color: "black",
     backgroundColor: "white",
@@ -36,15 +37,7 @@ function App() {
       document.body.style.backgroundColor = "white";
     }
   };
-  const showalert = (message, type) => {
-    setalert({
-      msg: message,
-      type: type,
-    });
-    setTimeout(() => {
-      setalert(null);
-    }, 3000);
-  };
+ 
   return (
     <>
     <Router>
@@ -55,16 +48,12 @@ function App() {
         togglemode={toogle}
         scolor={cswitch}
       />
-      <Alert alert={alert} />
+    
       <Routes>
         <Route exact path="/About-Villages" element={ <About mode={styleabout} />}/>
          
        
-        <Route exact path="/" element = { <Textform
-            titletext="enter the text here"
-            showalert={showalert}
-            mode={mode}
-          />}/> 
+        <Route exact path="/" element = { <Cards/> } /> 
          
       </Routes>
     </Router>

@@ -69,7 +69,7 @@ export default function About(props) {
               <li>hano</li>
               
              </ul>
-             <img src={process.env.PUBLIC_URL+"flower.jpg"} class="img-fluid" alt="not found"/>
+             <img src={process.env.PUBLIC_URL+"flower.jpg"}class="img-fluid" alt="not found"/>
              
             </div>
           </div>
