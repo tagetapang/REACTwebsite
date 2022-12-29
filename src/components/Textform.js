@@ -28,10 +28,12 @@ export default function Textform(props) {
    
 
 
-    
-    navigator.clipboard.writeText(textt);
+    var text = document.getElementById("mybox");
+    text.select();
+    text.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(text.value);
     props.showalert("copied","success");
-   
+    document.getSelection().removeAllRanges();
   }
 
   const [textt, settext] = useState(" ");
@@ -66,7 +68,7 @@ export default function Textform(props) {
       <div className={`container text-${props.mode === 'light'?"dark": "light"}`}>
         <h1>your text summary</h1>
         <p>
-          {textt.split(/\s+/).filter((Element) => {return Element.length !== 0}).length} no of words and {textt.length} no of
+          {textt.split(" ").filter((Element) => {return Element.length !== 0}).length} no of words and {textt.length} no of
           characters
         </p>
         <p>
