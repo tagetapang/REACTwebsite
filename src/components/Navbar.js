@@ -7,7 +7,7 @@ export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-black">
       <div className="container-fluid">
-        <Link className="navbar-brand text-white mx-2" to="/">
+        <Link className="navbar-brand text-white mx-2" style={{textDecoration : "none"}} to="/">
           {props.title}
         </Link>
         <button
@@ -28,18 +28,20 @@ export default function Navbar(props) {
                 className="nav-Link active text-white mx-2"
                 aria-current="page"
                 to="/"
+                style={{textDecoration : "none"}}
               >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-Link text-white mx-2" to="/About-Villages">
+              <Link className="nav-Link text-white mx-2"  style={{textDecoration : "none"}} to="/About-Villages">
                 About-Villages
               </Link>
             </li>
             <li className="nav-item dropdown ">
               <Link
                 className="nav-Link dropdown-toggle text-white mx-2"
+                style={{textDecoration : "none"}}
                 to="#/"
                 role="button"
                 data-bs-toggle="dropdown"
